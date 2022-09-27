@@ -2,6 +2,7 @@
   <div class="container" style="padding: 50px 0 100px 0">
     <Profile v-if="store.user" />
     <Auth v-else />
+    <Prueba></Prueba>
     <ToDoList></ToDoList>
   </div>
 </template>
@@ -12,12 +13,14 @@
   import Auth from './components/Auth.vue'
   import Profile from './components/Profile.vue'
 import ToDoList from './components/ToDoList.vue'
+import Prueba from './components/Prueba.vue'
 
   export default {
     components: {
     Auth,
     Profile,
-    ToDoList
+    ToDoList,
+    Prueba
 },
 
     setup() {
