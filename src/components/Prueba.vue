@@ -21,15 +21,15 @@
             <tbody>
                 <tr v-for="(task, index) in tasksList" :key="index">
                     <td scope= "row" class= "text-center">
-                        <span :class="{'finished' : task.status === '2'}">
+                        <span :class="{'finished' : task.is_complete === 'Terminada'}">
                             {{task.title}}
                         </span>
                     </td>
                     <td class= "text-center">
                         <span @click= "changeStatus(index)" class= "pointer"
-                        :class="{'text-danger': task.is_complete === '0',
-                        'text-warning' : task.is_complete === '1',
-                        'text-success' : task.is_complete === '2'}">{{task.is_complete}}</span>
+                        :class="{'text-danger': task.is_complete === 'Pendiente',
+                        'text-warning' : task.is_complete === 'En Progreso',
+                        'text-success' : task.is_complete === 'Terminada'}">{{task.is_complete}}</span>
                     </td>
                     <td>
                         <div class= "text-center pointer" @click= "editTask(index)">
