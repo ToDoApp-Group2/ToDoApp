@@ -31,14 +31,7 @@ export default {
 
     },
     methods: {
-        /*async callTasks() {
-           this.taskList = await supabase.from('tasks').select('title', 'is_complete').eq('user_id', this.user.id)
-        },
-
-        async callStatus() {
-            this.statusesList = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id)
-        },*/
-
+        
         async CallData() {
             this.tasks = await supabase.from('tasks').select('title, is_complete').eq('user_id', this.user.id);
             this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id);
@@ -47,9 +40,6 @@ export default {
 
             for (let i = 0; i < this.tasks.data.length; i++) {
                 this.tasksList.push(this.tasks.data[i]);
-
-                //this.tasksList.Object.keys(this.statusesList)
-                //this.taskList.push(this.statusesList.data[i]);
             }
 
             for (let i = 0; i < this.statuses.data.length; i++) {
@@ -58,12 +48,8 @@ export default {
 
             console.log(this.tasksList)
             console.log(this.statusesList)
-            
-           //data = {...this.tasksList, ...this.statusesList}
         },
 
-        /*deleteTask(index){
-            this.tasks.splice(index, 1);*/
     },
     mounted(){
         this.CallData()
