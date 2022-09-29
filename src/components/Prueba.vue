@@ -40,8 +40,10 @@ export default {
         },*/
 
         async CallData() {
-            this.tasks = await supabase.from('tasks').select('title').eq('user_id', this.user.id);
+            this.tasks = await supabase.from('tasks').select('title, is_complete').eq('user_id', this.user.id);
             this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id);
+
+            console.log(this.tasks)
 
             for (let i = 0; i < this.tasks.data.length; i++) {
                 this.tasksList.push(this.tasks.data[i]);
