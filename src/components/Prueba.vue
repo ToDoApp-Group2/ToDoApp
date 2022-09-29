@@ -1,6 +1,14 @@
 <template>
-  <h1>
-    {{prueba}}</h1>
+  <h1> Lista de tareas:
+    <br>
+  <br>
+    {{tasksList}}.
+  <br>
+  <br>
+    Lista de estados: 
+    <br>
+  <br>
+    {{statusesList}}</h1>
 </template>
 
 <script>
@@ -16,17 +24,19 @@ export default {
             //userid : user.id,
             task : "",
             statuses : [],
-            prueba : [],
+            tasksList : [],
+            statusesList : [],
+            //data : []
         }
 
     },
     methods: {
         /*async callTasks() {
-           this.tasks = await supabase.from('tasks').select('title', 'is_complete').eq('user_id', this.user.id)
+           this.taskList = await supabase.from('tasks').select('title', 'is_complete').eq('user_id', this.user.id)
         },
 
         async callStatus() {
-            this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id)
+            this.statusesList = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id)
         },*/
 
         async CallData() {
@@ -34,9 +44,20 @@ export default {
             this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id);
 
             for (let i = 0; i < this.tasks.data.length; i++) {
-                this.prueba.push(this.tasks.data[i])
+                this.tasksList.push(this.tasks.data[i]);
+
+                //this.tasksList.Object.keys(this.statusesList)
+                //this.taskList.push(this.statusesList.data[i]);
             }
-            console.log(this.prueba)
+
+            for (let i = 0; i < this.statuses.data.length; i++) {
+                this.statusesList.push(this.statuses.data[i]);
+            }
+
+            console.log(this.tasksList)
+            console.log(this.statusesList)
+            
+           //data = {...this.tasksList, ...this.statusesList}
         },
 
         /*deleteTask(index){
