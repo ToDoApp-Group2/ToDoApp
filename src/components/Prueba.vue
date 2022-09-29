@@ -102,6 +102,12 @@ export default {
             this.task = this.tasksList[index].title;
             this.editedTask = index;
         },
+
+        changeStatus(index){
+            let newIndex = this.statuses.indexOf(this.tasksList[index].is_complete);
+            if(++newIndex > 2) newIndex = 0;
+            this.tasksList[index].is_complete = this.statuses[newIndex];
+        }
     },
     mounted(){
         this.CallData()
