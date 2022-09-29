@@ -1,6 +1,6 @@
 <template>
-  <h1>{{this.statuses.data}}
-    {{this.tasks.data}}</h1>
+  <h1>
+    {{prueba}}</h1>
 </template>
 
 <script>
@@ -14,23 +14,29 @@ export default {
             user : supabase.auth.user(),
             tasks: [],
             //userid : user.id,
-            //task : "",
+            task : "",
             statuses : [],
+            prueba : [],
         }
 
     },
     methods: {
-        async callTasks() {
+        /*async callTasks() {
            this.tasks = await supabase.from('tasks').select('title', 'is_complete').eq('user_id', this.user.id)
         },
 
         async callStatus() {
             this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id)
-        },
+        },*/
 
         async CallData() {
-            this.tasks = await supabase.from('tasks').select('title', 'is_complete').eq('user_id', this.user.id);
-            this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id)
+            this.tasks = await supabase.from('tasks').select('title').eq('user_id', this.user.id);
+            this.statuses = await supabase.from('tasks').select('is_complete').eq('user_id', this.user.id);
+
+            for (let i = 0; i < this.tasks.data.length; i++) {
+                this.prueba.push(this.tasks.data[i])
+            }
+            console.log(this.prueba)
         },
 
         /*deleteTask(index){
