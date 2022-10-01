@@ -3,7 +3,7 @@
     <Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
-    <ToDoList></ToDoList>
+    <!--<ToDoList></ToDoList>-->
   </div>
 </template>
 

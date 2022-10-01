@@ -49,6 +49,7 @@
 
 
 <script>
+import { onUpdated } from 'vue';
 import { store } from '../stores/store'
 import { supabase } from '../supabase/index'
 
@@ -69,14 +70,23 @@ export default {
     methods: {
         
         async CallData() {
-            this.tasks = await supabase.from('tasks').select('title, is_complete').eq('user_id', this.user.id);
-
-            console.log(this.tasks)
+            this.tasks = await supabase.from('tasks').select('title, is_complete, id').eq('user_id', this.user.id);
 
             for (let i = 0; i < this.tasks.data.length; i++) {
                 this.tasksList.push(this.tasks.data[i]);
             }
         },
+
+        //Funcion de update, v1 - Funciona.
+        /*async updateDB() {
+            console.log("1");
+            for (let i=0; i < this.tasksList.length; ++i){
+                await supabase.from('tasks').update({title: this.tasksList[i].title}).eq('id', this.tasksList[i].id);
+                console.log("2")
+        }
+        },*/
+
+        
 
         submitTask(){
             if(this.task.length === 0) return;
