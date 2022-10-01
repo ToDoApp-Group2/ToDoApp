@@ -1,10 +1,8 @@
 <template>
-  <div class="container" style="padding: 50px 0 100px 0">
+  <div>
     <SignInUP></SignInUP>
-    <Profile v-if="store.user" />
-    <Auth v-else />
-    <Prueba></Prueba>
-    <ToDoList></ToDoList>
+    <!--<Profile v-if="store.user" />
+    <Auth v-else /> -->
   </div>
 </template>
 
@@ -38,3 +36,15 @@ import SignInUP from './components/SignInUP.vue'
     },
   }
 </script>
+
+<style scoped>
+  div {
+    padding: 0;
+    margin: 0;
+  };
+
+  template {
+    padding: 0;
+    margin: 0;
+  }
+</style>
