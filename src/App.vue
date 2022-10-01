@@ -1,5 +1,6 @@
 <template>
   <div class="container" style="padding: 50px 0 100px 0">
+    <SignInUP></SignInUP>
     <Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
@@ -14,13 +15,15 @@
   import Profile from './components/Profile.vue'
 import ToDoList from './components/ToDoList.vue'
 import Prueba from './components/Prueba.vue'
+import SignInUP from './components/SignInUP.vue'
 
   export default {
     components: {
     Auth,
     Profile,
     ToDoList,
-    Prueba
+    Prueba,
+    SignInUP
 },
 
     setup() {
