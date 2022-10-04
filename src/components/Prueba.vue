@@ -72,7 +72,7 @@ export default {
         
         async CallData() {
             this.tasks = await supabase.from('tasks').select('title, is_complete, id').eq('user_id', this.user.id);
-
+            this.tasksList = [];
             for (let i = 0; i < this.tasks.data.length; i++) {
                 this.tasksList.push(this.tasks.data[i]);
             }
@@ -80,15 +80,16 @@ export default {
 
 
         async submitTask(){
-            if(this.task.length === 0) return;
+            if(this.task.length <= 4) return alert("Ingresa más de 4 letras");
             //Acá se debe ingresar una alerta para tareas vacias.
             if(this.editedTask === null){
                 console.log(1)
-                await supabase.from('tasks').insert({ title: this.task, /*id: this.tasksList.length,*/ user_id: this.user.id})
-                this.tasksList.push({
+                await supabase.from('tasks').insert({ title: this.task, /*id: this.tasksList.length,*/ user_id: this.user.id});
+                this.CallData();
+                /*this.tasksList.push({
                     title: this.task,
-                    is_complete: 0,});
-;                   
+                    is_complete: 0,
+                    id: newTask.data.id});*/                   
             }else{
                 this.tasksList[this.editedTask].title = this.task;
                 this.editedTask = null;
