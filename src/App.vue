@@ -37,7 +37,7 @@ import SignInUP from './components/SignInUP.vue'
   }
 </script>
 
-<style scoped>
+<style>
   div {
     padding: 0;
     margin: 0;
