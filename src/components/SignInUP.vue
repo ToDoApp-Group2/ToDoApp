@@ -11,11 +11,11 @@
       <img src="logo_checkme_2.png" alt="logo checkme" class="mt-5 img-responsive" width="300" height="300">
     </div>
 
-      <p class="fw-bold  pt-0 mt-0 lead font-family">
+      <h1 class="fw-bold bd-highlight">
         Put yourself <br />
         at the top of your <br />
-        to do list
-      </p>
+        <p class="text-black bd-highlight"> to do list </p>
+      </h1>
       <!-- Section: Design Block 1 -->
       <section class="text-center text-lg-start p-5">
         <!-- Jumbotron -->
@@ -30,8 +30,8 @@
                 "
               >
                 <div class="card-body p-5 shadow-5 text-center">
-                  <h2 class="fw-bold mb-5">Sign up</h2>
-                  <p class="mb-5"> "Good Plans Only"</p>
+                  <h2 class="fw-bold  mb-4">Sign up</h2>
+                  <p class="mb-5 fw-bold text-warning"> "Good Plans Only"</p>
 
                   <form>
                     <!-- First and last names: 2 column grid layout with text inputs -->
@@ -93,7 +93,8 @@
               </div>
             </div>
 
-            <div class="col-lg-6 mb-5 mb-lg-0">
+            <div 
+            class="col-lg-6 mb-5 mb-lg-0">
               <img
                 src="https://images.pexels.com/photos/7582013/pexels-photo-7582013.jpeg"
                 class="w-100 rounded-4 shadow-4"
@@ -129,15 +130,15 @@
             </div>
             <div class="col-lg-6 mb-5 mb-lg-0">
               <div
-                class="card cascading-right"
+                class="card cascading-left"
                 style="
                   background: hsla(0, 0%, 100%, 0.55);
                   backdrop-filter: blur(30px);
                 "
               >
                 <div class="card-body p-5 shadow-5 text-center">
-                  <h2 class="fw-bold mb-5">Log in</h2>
-                  <p class="mb-5"> "DO <del>UBT</del>"</p>
+                  <h2 class="fw-bold mb-4">Log in</h2>
+                  <p class="mb-5 fw-bold text-warning"> "DO <del>UBT</del>"</p>
 
                   <form>
 
@@ -146,11 +147,11 @@
 
                       <input
                         type="email"
-                        id="form1Example3"
+                        id="form1Example4"
                         class="form-control"
                         placeholder="name@example.com"
                       />
-                      <label class="form-label" for="form1Example3"
+                      <label class="form-label" for="form1Example4"
                         >Email address</label
                       >
 
@@ -175,22 +176,6 @@
       <!-- Section: Design Block 2 -->
     </div>
     <!-- Background -->
-
-    <div
-      class="d-flex flex-row bd-highlight bg-image"
-      style="background-image: url(https://images.pexels.com/photos/4300394/pexels-photo-4300394.jpeg?cs=srgb&dl=pexels-dominika-roseclay-4300394.jpg&fm=jpg); height: 100vh width: 100vh"
-    >
-      <div class="p-2 bd-highlight">
-        <h2>Create Account</h2>
-
-        <button>Signup</button>
-      </div>
-
-      <div class="p-2 bd-highlight">
-        <h2>Welcome Back!</h2>
-        <button>Login</button>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -205,6 +190,10 @@ export default {};
   
   .cascading-right {
   margin-right: -50px;
+  }
+
+  .cascading-left {
+  margin-left: -50px;
 }
 
 @media (max-width: 991.98px) {
