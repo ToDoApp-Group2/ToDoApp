@@ -80,7 +80,7 @@ export default {
 
 
         async submitTask(){
-            if(this.task.length <= 4) return alert("Ingresa más de 4 letras");
+            if(this.task.length < 4) return alert("Ingresa más de 3 letras");
             //Acá se debe ingresar una alerta para tareas vacias.
             if(this.editedTask === null){
                 console.log(1)
