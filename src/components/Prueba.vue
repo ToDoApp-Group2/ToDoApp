@@ -77,29 +77,21 @@ export default {
             }
         },
 
-        //Funcion de update, v1 - Funciona.
-        /*async updateDB() {
-            console.log("1");
-            for (let i=0; i < this.tasksList.length; ++i){
-                await supabase.from('tasks').update({title: this.tasksList[i].title}).eq('id', this.tasksList[i].id);
-                console.log("2")
-        }
-        },*/
 
-        
-
-        submitTask(){
+        async submitTask(){
             if(this.task.length === 0) return;
             //Acá se debe ingresar una alerta para tareas vacias.
             if(this.editedTask === null){
                 this.tasksList.push({
                     title: this.task,
-                    is_complete: 0,
-             });
+                    is_complete: 0,});
+                    
             }else{
                 this.tasksList[this.editedTask].title = this.task;
                 this.editedTask = null;
-            }
+                for (let i=0; i < this.tasksList.length; ++i){
+                await supabase.from('tasks').update({title: this.tasksList[i].title}).eq('id', this.tasksList[i].id);
+            }}
             // To delete after add a new task
             this.task = "";
         },
