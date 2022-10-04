@@ -2,20 +2,22 @@
   <div>
     <!-- Background -->
     <div
-      class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+      class="bg-image text-center shadow-1-strong rounded mb-5 text-white"
       style="
         background-image: url('https://images.pexels.com/photos/5861190/pexels-photo-5861190.jpeg?cs=srgb&dl=pexels-rahul-shah-5861190.jpg&fm=jpg');
       "
     >
-      <h1 class="mb-3 h2">Check.Me logo?</h1>
+    <div class="col-md-6 mx-auto">
+      <img src="logo_checkme_2.png" alt="logo checkme" class="mt-5 img-responsive" width="300" height="300">
+    </div>
 
-      <p class="fw-bold mb-5">
+      <p class="fw-bold  pt-0 mt-0 lead font-family">
         Put yourself <br />
         at the top of your <br />
         to do list
       </p>
       <!-- Section: Design Block 1 -->
-      <section class="text-center text-lg-start">
+      <section class="text-center text-lg-start p-5">
         <!-- Jumbotron -->
         <div class="container py-4">
           <div class="row g-0 align-items-center">
@@ -197,7 +199,11 @@ export default {};
 </script>
 
 <style>
-.cascading-right {
+  font-family {
+  font-family: 'Roboto', 'sans-serif';
+}
+  
+  .cascading-right {
   margin-right: -50px;
 }
 
