@@ -1,4 +1,5 @@
 <template>
+<NavBar />
   <div class="container" style="padding: 50px 0 100px 0">
     <Profile v-if="store.user" />
     <Auth v-else />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+  import NavBar from "./components/NavBar.vue"
   import { store } from './stores/store'
   import { supabase } from './supabase/index'
   import Auth from './components/Auth.vue'
@@ -17,6 +19,7 @@ import Prueba from './components/Prueba.vue'
 
   export default {
     components: {
+    NavBar,
     Auth,
     Profile,
     ToDoList,
