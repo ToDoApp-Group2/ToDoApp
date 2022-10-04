@@ -93,7 +93,8 @@ export default {
                 this.tasksList[this.editedTask].title = this.task;
                 this.editedTask = null;
                 for (let i=0; i < this.tasksList.length; ++i){
-                await supabase.from('tasks').update({title: this.tasksList[i].title}).eq('id', this.tasksList[i].id);
+                    console.log(this.tasksList[i].id)
+                    await supabase.from('tasks').update({title: this.tasksList[i].title}).eq('id', this.tasksList[i].id);
             }}
             // To delete after add a new task
             this.task = "";
