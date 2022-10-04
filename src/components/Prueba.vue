@@ -63,6 +63,7 @@ export default {
             task : "",
             statuses : ["Pendiente", "En Progreso", "Terminada"],
             tasksList : [],
+            editedTask : null,
             //data : []
         }
 
@@ -82,9 +83,11 @@ export default {
             if(this.task.length === 0) return;
             //Acá se debe ingresar una alerta para tareas vacias.
             if(this.editedTask === null){
+                console.log(1)
                 this.tasksList.push({
                     title: this.task,
                     is_complete: 0,});
+                    await supabase.from('tasks').insert({ title: this.task, id: this.tasksList.length, user_id: this.user.id})
                     
             }else{
                 this.tasksList[this.editedTask].title = this.task;
