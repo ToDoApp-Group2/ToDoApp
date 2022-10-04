@@ -87,7 +87,7 @@ export default {
                 this.tasksList.push({
                     title: this.task,
                     is_complete: 0,});
-                    await supabase.from('tasks').insert({ title: this.task, id: this.tasksList.length, user_id: this.user.id})
+                    console.log(await supabase.from('tasks').insert({ title: this.task, /*id: this.tasksList.length,*/ user_id: this.user.id}))
                     
             }else{
                 this.tasksList[this.editedTask].title = this.task;
@@ -99,7 +99,9 @@ export default {
             this.task = "";
         },
 
-        deleteTask(index){
+        async deleteTask(index){
+            console.log(this.tasksList[index]);
+            await supabase.from('tasks').delete().eq('id', this.tasksList[index].id)
             this.tasksList.splice(index, 1);
         },
 
