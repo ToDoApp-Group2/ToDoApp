@@ -112,10 +112,11 @@ export default {
             this.editedTask = index;
         },
 
-        changeStatus(index){
+        async changeStatus(index){
             let newIndex = this.statuses.indexOf(this.tasksList[index].is_complete);
             if(++newIndex > 2) newIndex = 0;
             this.tasksList[index].is_complete = this.statuses[newIndex];
+            await supabase.from('tasks').update({ is_complete: this.statuses[newIndex]}).eq('id', this.tasksList[index].id)
         }
     },
     mounted(){
