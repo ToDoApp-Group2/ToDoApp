@@ -114,9 +114,11 @@
           username,
           website,
           avatar_url,
+          email,
   
           updateProfile,
           signOut,
+          handleLogin,
         }
       },
     }

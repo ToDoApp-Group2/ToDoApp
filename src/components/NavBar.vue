@@ -12,6 +12,7 @@
          <li class="nav-item">
             <a href="#" class="nav-link">Log In</a>
         </li>
+        <router-link to="/prueba">Prueba</router-link>
     </ul>
     <div class="hamburguer">
         <span class="bar"></span>

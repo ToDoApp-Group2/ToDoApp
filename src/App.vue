@@ -1,6 +1,7 @@
 <template>
 
 <NavBar />
+<router-view></router-view>
     <SignInUP></SignInUP>
   <div class="container" style="padding: 50px 0 100px 0">
     <router-link to="/prueba">Prueba</router-link>
@@ -11,7 +12,7 @@
     <ToDoList></ToDoList>-->
 
   </div>
-  <router-view></router-view>
+
 </template>
 
 <script>
@@ -50,7 +51,7 @@ export default {
       store,
     };
   },
-  methods: {
+  /*methods: {
     async CallData() {
       this.tasks = await supabase
         .from("tasks")
@@ -61,10 +62,10 @@ export default {
         this.tasksList.push(this.tasks.data[i]);
       }
     },
-  },
+  },*/
 
   mounted(){
-    callData()
+    //callData()
   },
 };
 </script>
