@@ -4,7 +4,7 @@
 
         <!-- Input for a new task -->
         <div class="d-flex">
-            <input v-model= "task" type="text" placeholder="Ingrese tarea" class= "form-control">
+            <input v-model= "ListStore.task" type="text" placeholder="Ingrese tarea" class= "form-control">
             <button @click="ListStore.submitTask" class= "btn btn-primary rounded-0">Aceptar</button>
         </div>
 
@@ -58,13 +58,26 @@ import useListStore from "../stores/List";
 
 export default {
     name: "ToDoList",
+
+    methods: {
+    async CallData() {
+      this.tasks = await supabase
+        .from("tasks")
+        .select("title, is_complete, id")
+        .eq("user_id", this.user.id);
+      this.tasksList = [];
+      for (let i = 0; i < this.tasks.data.length; i++) {
+        this.tasksList.push(this.tasks.data[i]);
+      }
+    },
+},
     computed: {
-        ...mapStores(useListStore)
+        ...mapStores(useListStore),
     },
 
-    mounted(){
+    /*mounted(){
         ListStore.CallData()
-    }
+    }*/
 }
 
 </script>

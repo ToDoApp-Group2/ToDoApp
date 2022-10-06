@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { supabase } from '../supabase/index'
 
 export default defineStore("List", {
   state() {
@@ -15,7 +16,7 @@ export default defineStore("List", {
     async CallData() {
       this.tasks = await supabase
         .from("tasks")
-        .select("title, is_complete, id")
+        .select("title, is_complete, id, inserted_at")
         .eq("user_id", this.user.id);
       this.tasksList = [];
       for (let i = 0; i < this.tasks.data.length; i++) {
