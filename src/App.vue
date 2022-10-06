@@ -1,16 +1,18 @@
 <template>
+
 <NavBar />
+    <SignInUP></SignInUP>
   <div class="container" style="padding: 50px 0 100px 0">
     <Notes></Notes>
     <!--<Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
     <ToDoList></ToDoList>-->
+
   </div>
 </template>
 
 <script>
-
 import { store } from "./stores/store";
 import { supabase } from "./supabase/index";
 import NavBar from "./components/NavBar.vue"
@@ -20,6 +22,7 @@ import ToDoList from "./components/ToDoList.vue";
 import Prueba from "./components/Prueba.vue";
 import Notes from "./components/Notes.vue"
 import callData from "./stores/List"
+import SignInUP from './components/SignInUP.vue'
 
 export default {
   components: {
@@ -28,8 +31,10 @@ export default {
     Profile,
     ToDoList,
     Prueba,
+    SignInUP
     Notes,
   },
+
 
   setup() {
     store.user = supabase.auth.user();
@@ -58,3 +63,15 @@ export default {
   },
 };
 </script>
+
+<style>
+  div {
+    padding: 0;
+    margin: 0;
+  };
+
+  template {
+    padding: 0;
+    margin: 0;
+  }
+</style>
