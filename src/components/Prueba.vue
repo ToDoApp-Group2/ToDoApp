@@ -4,8 +4,8 @@
 
         <!-- Input for a new task -->
         <div class="d-flex">
-            <input v-model= "task" type="text" placeholder="Ingrese tarea" class= "form-control">
-            <button @click="submitTask" class= "btn btn-primary rounded-0">Aceptar</button>
+            <input v-model= "ListStore.task" type="text" placeholder="Ingrese tarea" class= "form-control">
+            <button @click="ListStore.submitTask" class= "btn btn-primary rounded-0">Aceptar</button>
         </div>
 
         <!-- Task table -->
@@ -19,25 +19,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(task, index) in tasksList" :key="index">
+                <tr v-for="(task, index) in ListStore.tasksList" :key="index">
                     <td scope= "row" class= "text-center">
-                        <span :class="{'finished' : task.status === '2'}">
+                        <span :class="{'finished' : task.is_complete === 'Terminada'}">
                             {{task.title}}
                         </span>
                     </td>
                     <td class= "text-center">
-                        <span @click= "changeStatus(index)" class= "pointer"
-                        :class="{'text-danger': task.is_complete === '0',
-                        'text-warning' : task.is_complete === '1',
-                        'text-success' : task.is_complete === '2'}">{{task.is_complete}}</span>
+                        <span @click= "ListStore.changeStatus(index)" class= "pointer"
+                        :class="{'text-danger': task.is_complete === 'Pendiente',
+                        'text-warning' : task.is_complete === 'En Progreso',
+                        'text-success' : task.is_complete === 'Terminada'}">{{task.is_complete}}</span>
                     </td>
                     <td>
-                        <div class= "text-center pointer" @click= "editTask(index)">
+                        <div class= "text-center pointer" @click= "ListStore.editTask(index)">
                             <span class= "fa fa-pen"></span>
                         </div>
                     </td>
                     <td>
-                        <div class= "text-center pointer" @click= "deleteTask(index)">
+                        <div class= "text-center pointer" @click= "ListStore.deleteTask(index)">
                             <span class= "fa fa-trash"></span>
                         </div>
                     </td>
@@ -49,64 +49,35 @@
 
 
 <script>
+import { onUpdated } from 'vue';
 import { store } from '../stores/store'
 import { supabase } from '../supabase/index'
+import { mapStores } from 'pinia';
+import useListStore from "../stores/List";
+
 
 export default {
-    name: "Prueba",
-    data(){
-        return{
-            user : supabase.auth.user(),
-            tasks: [],
-            //userid : user.id,
-            task : "",
-            statuses : ["Pendiente", "En Progreso", "Terminada"],
-            tasksList : [],
-            //data : []
-        }
+    name: "ToDoList",
 
-    },
     methods: {
-        
-        async CallData() {
-            this.tasks = await supabase.from('tasks').select('title, is_complete').eq('user_id', this.user.id);
-
-            console.log(this.tasks)
-
-            for (let i = 0; i < this.tasks.data.length; i++) {
-                this.tasksList.push(this.tasks.data[i]);
-            }
-        },
-
-        submitTask(){
-            if(this.task.length === 0) return;
-            //Acá se debe ingresar una alerta para tareas vacias.
-            if(this.editedTask === null){
-                this.tasksList.push({
-                    title: this.task,
-                    is_complete: 0,
-             });
-            }else{
-                this.tasksList[this.editedTask].title = this.task;
-                this.editedTask = null;
-            }
-            // To delete after add a new task
-            this.task = "";
-        },
-
-        deleteTask(index){
-            this.tasksList.splice(index, 1);
-        },
-
-        editTask(index){
-            this.task = this.tasksList[index].title;
-            this.editedTask = index;
-        },
+    async CallData() {
+      this.tasks = await supabase
+        .from("tasks")
+        .select("title, is_complete, id")
+        .eq("user_id", this.user.id);
+      this.tasksList = [];
+      for (let i = 0; i < this.tasks.data.length; i++) {
+        this.tasksList.push(this.tasks.data[i]);
+      }
     },
-    mounted(){
-        this.CallData()
-    }
+},
+    computed: {
+        ...mapStores(useListStore),
+    },
 
+    /*mounted(){
+        ListStore.CallData()
+    }*/
 }
 
 </script>
