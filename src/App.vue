@@ -1,4 +1,5 @@
 <template>
+<NavBar />
   <div class="container" style="padding: 50px 0 100px 0">
     <Notes></Notes>
     <!--<Profile v-if="store.user" />
@@ -9,8 +10,10 @@
 </template>
 
 <script>
+
 import { store } from "./stores/store";
 import { supabase } from "./supabase/index";
+import NavBar from "./components/NavBar.vue"
 import Auth from "./components/Auth.vue";
 import Profile from "./components/Profile.vue";
 import ToDoList from "./components/ToDoList.vue";
@@ -20,6 +23,7 @@ import callData from "./stores/List"
 
 export default {
   components: {
+  NavBar,
     Auth,
     Profile,
     ToDoList,

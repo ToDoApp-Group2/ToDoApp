@@ -1,6 +1,6 @@
 <template>
   <form class="row flex-center flex" @submit.prevent="handleLogin">
-    <div class="col-6 form-widget">
+    <div class="col-6 form-widgetgit">
       <h1 class="header">Supabase + Vue 3</h1>
       <p class="description">Sign in via magic link with your email below</p>
       <div>
