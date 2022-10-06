@@ -6,7 +6,9 @@
       To Do List
     </h1>
     <!-- Background -->
-    <div class="bg-dark bg-gradient text-center shadow-1-strong rounded text-white">
+    <div
+      class="bg-dark bg-gradient text-center shadow-1-strong rounded text-white"
+    >
       <div class="d-flex col-md-6 mx-auto mt-5"></div>
 
       <!-- Section: Design Block 1 -->
@@ -15,40 +17,67 @@
         <div class="container py-4 mt-5">
           <div class="row g-0 align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0">
-              <div class="card cascading-right" style="
+              <div
+                class="card cascading-right"
+                style="
                   background: hsla(0, 0%, 100%, 0.55);
                   backdrop-filter: blur(30px);
-                ">
+                "
+              >
                 <div class="card-body p-5 shadow-5 text-center">
                   <h2 class="fw-bold mb-4">Sign up</h2>
                   <p class="mb-5 fw-bold text-warning">"Good Tasks Only"</p>
 
-                  <form @submit.prevent="handleLogin">
+                  <form @submit.prevent="LogInStore.handleLogin">
                     <!-- First and last names: 2 column grid layout with text inputs -->
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input type="text" id="form1Example1" class="form-control" />
-                          <label class="form-label" for="form1Example1">First name</label>
+                          <input
+                            type="text"
+                            id="form1Example1"
+                            class="form-control"
+                            v-model="LogInStore.username"
+                          />
+                          <label class="form-label" for="form1Example1"
+                            >First name</label
+                          >
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input type="text" id="form1Example2" class="form-control" />
-                          <label class="form-label" for="form1Example2">Last name</label>
+                          <input
+                            type="text"
+                            id="form1Example2"
+                            class="form-control"
+                            v-model="LogInStore.website"
+                          />
+                          <label class="form-label" for="form1Example2"
+                            >Last name</label
+                          >
                         </div>
                       </div>
                     </div>
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                      <input type="email" id="form1Example3" class="form-control" placeholder="name@example.com"
-                        v-model="email" />
-                      <label class="form-label" for="form1Example3">Email address</label>
+                      <input
+                        type="email"
+                        id="form1Example3"
+                        class="form-control"
+                        placeholder="name@example.com"
+                        v-model="LogInStore.email"
+                      />
+                      <label class="form-label" for="form1Example3"
+                        >Email address</label
+                      >
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-warning btn-block mb-4">
+                    <button
+                      type="submit"
+                      class="btn btn-warning btn-block mb-4"
+                    >
                       Sign up
                     </button>
                   </form>
@@ -56,22 +85,15 @@
               </div>
             </div>
 
-            <div class=" bg-img
-                bg-image
-                w-50
-                rounded-4
-                shadow-4
-                col-lg-6
-                mb-5 mb-lg-0
-                d-flex
-                align-items-center
-                justify-content-center
-              " style="
+            <div
+              class="bg-img bg-image w-50 rounded-4 shadow-4 col-lg-6 mb-5 mb-lg-0 d-flex align-items-center justify-content-center"
+              style="
                 background-image: url('https://images.pexels.com/photos/7582013/pexels-photo-7582013.jpeg');
                 height: 100vh;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
-              ">
+              "
+            >
               <div class="p-2 bd-highlight text-center">
                 <h2>Welcome Back!</h2>
                 <button>Login</button>
@@ -88,22 +110,15 @@
         <!-- Jumbotron -->
         <div class="container py-4">
           <div class="row g-0 align-items-center">
-            <div class="
-                bg-image
-                w-50
-                rounded-4
-                shadow-4
-                col-lg-6
-                mb-5 mb-lg-0
-                d-flex
-                align-items-center
-                justify-content-center
-              " style="
+            <div
+              class="bg-image w-50 rounded-4 shadow-4 col-lg-6 mb-5 mb-lg-0 d-flex align-items-center justify-content-center"
+              style="
                 background-image: url('https://images.pexels.com/photos/7582013/pexels-photo-7582013.jpeg');
                 height: 100vh;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
-              ">
+              "
+            >
               <div class="p-2 bd-highlight text-center">
                 <h2>Create Account</h2>
 
@@ -111,25 +126,39 @@
               </div>
             </div>
             <div class="col-lg-6 mb-5 mb-lg-0">
-              <div class="card cascading-left" style="
+              <div
+                class="card cascading-left"
+                style="
                   background: hsla(0, 0%, 100%, 0.55);
                   backdrop-filter: blur(30px);
-                ">
+                "
+              >
                 <div class="card-body p-5 shadow-5 text-center">
                   <h2 class="fw-bold mb-4">Log in</h2>
                   <p class="mb-5 fw-bold text-warning">"DO <del>UBT</del>"</p>
 
-                  <form @submit.prevent="handleLogin">
+                  <form @submit.prevent="LogInStore.handleLogin">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                      <input type="email" id="form1Example4" class="form-control" placeholder="name@example.com"
-                        v-model="email" />
-                      <label class="form-label" for="form1Example4">Email address</label>
+                      <input
+                        type="email"
+                        id="form1Example4"
+                        class="form-control"
+                        placeholder="name@example.com"
+                        v-model="LogInStore.email"
+                      />
+                      <label class="form-label" for="form1Example4"
+                        >Email address</label
+                      >
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-warning btn-block mb-4"
-                      :value="loading ? 'Loading' : 'Send magic link'" :disabled="loading">
+                    <button
+                    type="submit"
+          class="button block"
+          :value="loading ? 'Loading' : 'Send magic link'"
+          :disabled="loading"
+                    >
                       Send magic link
                     </button>
                   </form>
@@ -146,39 +175,24 @@
   </div>
 </template>
 
-
 <script>
-  import { ref } from 'vue'
-  import { supabase } from '../supabase'
+import { ref } from "vue";
+import { supabase } from "../supabase";
+import { mapStores } from "pinia";
+import useLogInStore from "../stores/LogIn";
 
-  export default {
-    setup() {
-      const loading = ref(false)
-      const email = ref('')
+export default {
+  name: "ToDoList",
 
-      const handleLogin = async () => {
-        try {
-          loading.value = true
-          const { error } = await supabase.auth.signIn({ email: email.value })
-          if (error) throw error
-          alert('Check your email for the login link!')
-        } catch (error) {
-          alert(error.error_description || error.message)
-        } finally {
-          loading.value = false
-        }
-      }
+  computed: {
+    ...mapStores(useLogInStore),
+  },
 
-      return {
-        loading,
-        email,
-        handleLogin,
-      }
-    },
-  }
-  
+  mounted() {
+    this.ListStore.CallData();
+  },
+};
 </script>
-
 
 <style>
 body {
