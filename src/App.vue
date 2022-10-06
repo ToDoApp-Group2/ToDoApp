@@ -1,37 +1,56 @@
 <template>
   <div class="container" style="padding: 50px 0 100px 0">
-    <Profile v-if="store.user" />
+    <Notes></Notes>
+    <!--<Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
-    <!--<ToDoList></ToDoList>-->
+    <ToDoList></ToDoList>-->
   </div>
 </template>
 
 <script>
-  import { store } from './stores/store'
-  import { supabase } from './supabase/index'
-  import Auth from './components/Auth.vue'
-  import Profile from './components/Profile.vue'
-import ToDoList from './components/ToDoList.vue'
-import Prueba from './components/Prueba.vue'
+import { store } from "./stores/store";
+import { supabase } from "./supabase/index";
+import Auth from "./components/Auth.vue";
+import Profile from "./components/Profile.vue";
+import ToDoList from "./components/ToDoList.vue";
+import Prueba from "./components/Prueba.vue";
+import Notes from "./components/Notes.vue"
+import callData from "./stores/List"
 
-  export default {
-    components: {
+export default {
+  components: {
     Auth,
     Profile,
     ToDoList,
-    Prueba
-},
+    Prueba,
+    Notes,
+  },
 
-    setup() {
-      store.user = supabase.auth.user()
-      supabase.auth.onAuthStateChange((_, session) => {
-        store.user = session.user
-      })
-
-      return {
-        store,
+  setup() {
+    store.user = supabase.auth.user();
+    supabase.auth.onAuthStateChange((_, session) => {
+    store.user = session.user;
+    });
+    return {
+      store,
+    };
+  },
+  methods: {
+    async CallData() {
+      this.tasks = await supabase
+        .from("tasks")
+        .select("title, is_complete, id")
+        .eq("user_id", this.user.id);
+      this.tasksList = [];
+      for (let i = 0; i < this.tasks.data.length; i++) {
+        this.tasksList.push(this.tasks.data[i]);
       }
     },
-  }
+  },
+
+  mounted(){
+    callData()
+  },
+};
 </script>
