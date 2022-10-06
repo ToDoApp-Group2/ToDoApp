@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.js'
 
 import { createPinia } from 'pinia'
 
-import router from './router'
+import router from './router/index.js';
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'

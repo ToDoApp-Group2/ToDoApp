@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Prueba from '../components/Prueba.vue'
+import Prueba from '../views/PruebaView.vue';
  
 const routes = [
   {
@@ -10,7 +10,7 @@ const routes = [
 ];
  
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.VITE_APP_ENV),
   routes,
 });
  
