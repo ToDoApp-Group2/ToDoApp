@@ -8,30 +8,30 @@
 </template>
 
 <script>
-  import { store } from './stores/store'
-  import { supabase } from './supabase/index'
-  import Auth from './components/Auth.vue'
-  import Profile from './components/Profile.vue'
-import ToDoList from './components/ToDoList.vue'
-import Prueba from './components/Prueba.vue'
+import { store } from "./stores/store";
+import { supabase } from "./supabase/index";
+import Auth from "./components/Auth.vue";
+import Profile from "./components/Profile.vue";
+import ToDoList from "./components/ToDoList.vue";
+import Prueba from "./components/Prueba.vue";
 
-  export default {
-    components: {
+export default {
+  components: {
     Auth,
     Profile,
     ToDoList,
-    Prueba
-},
+    Prueba,
+  },
 
-    setup() {
-      store.user = supabase.auth.user()
-      supabase.auth.onAuthStateChange((_, session) => {
-        store.user = session.user
-      })
+  setup() {
+    store.user = supabase.auth.user();
+    supabase.auth.onAuthStateChange((_, session) => {
+      store.user = session.user;
+    });
 
-      return {
-        store,
-      }
-    },
-  }
+    return {
+      store,
+    };
+  },
+};
 </script>
