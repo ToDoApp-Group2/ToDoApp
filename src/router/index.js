@@ -1,11 +1,12 @@
+import App from "../App.vue"
 import { createRouter, createWebHistory } from 'vue-router';
-import Prueba from '../views/PruebaView.vue';
+import Notes from '../components/Notes.vue';
  
 const routes = [
   {
-    path: '/prueba',
-    name: 'Prueba',
-    component: Prueba,
+    path: '/notes',
+    name: 'Notes',
+    component: Notes,
   },
 ];
  

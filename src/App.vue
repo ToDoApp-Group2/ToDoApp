@@ -1,12 +1,13 @@
 <template>
 
 <NavBar />
-<router-view></router-view>
-    <SignInUP></SignInUP>
+<Notes></Notes>
+<Auths2 v-if="store.store"></Auths2>
+<Profile2></Profile2>
   <div class="container" style="padding: 50px 0 100px 0">
-    <router-link to="/prueba">Prueba</router-link>
+    <!--<router-link to="/prueba">Prueba</router-link>
   
-    <!--<Profile v-if="store.user" />
+    <Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
     <ToDoList></ToDoList>-->
@@ -26,19 +27,25 @@ import Prueba from "./components/Prueba.vue";
 import Notes from "./components/Notes.vue"
 import callData from "./stores/List"
 import SignInUP from './components/SignInUP.vue'
+import Auth2 from './components/Auths2.vue'
 import router from './router/index.js';
+import Auths2 from "./components/Auths2.vue";
+import Profile2 from "./components/Profile2.vue";
 
 
 export default {
   components: {
-  NavBar,
+    NavBar,
     Auth,
+    Auth2,
     Profile,
     ToDoList,
     Prueba,
     SignInUP,
     Notes,
-  },
+    Auths2,
+    Profile2
+},
 
 
 

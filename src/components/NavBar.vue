@@ -12,7 +12,7 @@
          <li class="nav-item">
             <a href="#" class="nav-link">Log In</a>
         </li>
-        <router-link to="/prueba">Prueba</router-link>
+        <router-link to="/notes">Prueba</router-link>
     </ul>
     <div class="hamburguer">
         <span class="bar"></span>
@@ -26,6 +26,7 @@
 
 
 <script>
+
 export default {
 }
 </script>

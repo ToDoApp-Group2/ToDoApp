@@ -16,14 +16,14 @@ export default defineStore("LogIn", {
   actions: {
     async handleLogin() {
         try {
-          loading.value = true
+          this.loading.value = true
           const { error } = await supabase.auth.signIn({ email: email.value })
           if (error) throw error
           alert('Check your email for the login link!')
         } catch (error) {
           alert(error.error_description || error.message)
         } finally {
-          loading.value = false
+          this.loading.value = false
         }
       },
             async  getProfile() {
@@ -86,8 +86,10 @@ export default defineStore("LogIn", {
           } finally {
             loading.value = false
           }
-        }
+        },
+        
   },
+  
 
   },
 );

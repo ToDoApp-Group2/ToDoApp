@@ -77,6 +77,8 @@
                     <button
                       type="submit"
                       class="btn btn-warning btn-block mb-4"
+                      :value="loading ? 'Loading' : 'Send magic link'"
+                      :disabled="loading"
                     >
                       Sign up
                     </button>
@@ -137,7 +139,7 @@
                   <h2 class="fw-bold mb-4">Log in</h2>
                   <p class="mb-5 fw-bold text-warning">"DO <del>UBT</del>"</p>
 
-                  <form @submit.prevent="LogInStore.handleLogin">
+                  <form @submit.prevent="LogInStore.handleLogin()">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                       <input
@@ -154,10 +156,10 @@
 
                     <!-- Submit button -->
                     <button
-                    type="submit"
-          class="button block"
-          :value="loading ? 'Loading' : 'Send magic link'"
-          :disabled="loading"
+                      type="submit"
+                      class="btn btn-warning btn-block mb-4"
+                      :value="LogInStore.loading ? 'Loading' : 'Send magic link'"
+                      :disabled="LogInStore.loading"
                     >
                       Send magic link
                     </button>

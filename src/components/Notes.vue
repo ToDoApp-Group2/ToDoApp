@@ -112,6 +112,7 @@ div.rotate-1 {
 }
 
 ul.notes li div {
+  text-align: center;
   text-decoration: none;
   color: #000;
   display: block;
