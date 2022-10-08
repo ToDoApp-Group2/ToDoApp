@@ -1,6 +1,6 @@
 <template>
 
-  <NavBar />
+  <NavBar :nav-links="navLinks"/>
   <router-view></router-view>
   <Auths2></Auths2>
   <Profile2></Profile2>
@@ -39,8 +39,23 @@ export default {
     Notes,
     Auths2,
     Profile2,
-    Footer,
+    Footer
+
 },
+
+data: () => ({
+  navLinks:[
+    {
+    text:'Login',
+    path:"/Home",
+    },
+    {
+      text:'Signup',
+      path:'/signup',
+    },
+
+  ]
+}),
 
 
 

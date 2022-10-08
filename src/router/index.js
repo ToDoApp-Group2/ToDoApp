@@ -14,6 +14,7 @@ const routes = [
     name: 'Notes',
     component: Notes,
   },
+  
 ];
  
 const router = createRouter({
