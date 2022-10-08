@@ -2,15 +2,13 @@
   <link
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     rel="stylesheet"
-  />
-  <div class="vh-100" style="background-color: #212529">
+  /><div class = "principal">
     <div
-      class="container py-5 h-100"
+      class="container"
       
     >
       <div class="card rounded-3 bg-image" style="
         background-image: url('https://img.freepik.com/foto-gratis/textura-madera-pino_1194-5372.jpg?w=996&t=st=1665239508~exp=1665240108~hmac=01e3b3673af429c47ba8181ecf8a725fb7e18ce3d3f6d8a5c9a6006094760b05');
-        height: 100vh;
         background-size: auto 100%;
        
       ">
@@ -19,7 +17,6 @@
             <img
               src="/src/assets/logocheckme.png"
               alt="Check"
-              width="110"
             />
             <h2 class="my-1 mb-5">Task List</h2>
           </div>
@@ -101,8 +98,8 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -126,12 +123,23 @@ export default {
 </script>
 
 <style scoped>
+.principal{
+  background-color: #212529;
+}
+
 .finished {
   text-decoration: line-through;
 }
 
+
 body {
   margin-top: 20px;
+}
+
+div.col{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 ul.notes li {
