@@ -1,20 +1,17 @@
 <template>
-  <SignInUP v-if="true"></SignInUP>
-<!--
-<NavBar />
-<router-view></router-view>
-<Profile2 v-if="store.user"></Profile2>
-  <div class="container" style="padding: 50px 0 100px 0">
-    <router-link to="/prueba">Prueba</router-link>
-  
-    <Profile v-if="store.user" />
-    <Auth v-else />
-    <Prueba></Prueba>
-    <ToDoList></ToDoList>
+  <!--<div class="container" style="padding: 0 0 100px 0">-->
+  <NavBar />
+  <router-view></router-view>
+  <Auths2 v-if="store.user"></Auths2>
+  <Profile2></Profile2>
     
-
-  </div>
-<Footer> </Footer>-->
+      <!--<router-link to="/prueba">Prueba</router-link>
+    
+      <Profile v-if="store.user" />
+      <Auth v-else />
+      <Prueba></Prueba>
+      <ToDoList></ToDoList>-->
+  
 </template>
 
 <script>
