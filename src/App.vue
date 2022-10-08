@@ -2,7 +2,8 @@
 
 <NavBar />
 <router-view></router-view>
-<Auths2 v-if="store.store"></Auths2>
+<Auths2 v-if="store.user"></Auths2>
+<Profile2></Profile2>
   <div class="container" style="padding: 50px 0 100px 0">
     <!--<router-link to="/prueba">Prueba</router-link>
   
