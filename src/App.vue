@@ -4,7 +4,8 @@
   <router-view></router-view>
   <Auths2></Auths2>
   <Profile2></Profile2>
-  <Notes></Notes>
+
+
   <Footer></Footer>
 
 </template>
