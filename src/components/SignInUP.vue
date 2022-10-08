@@ -5,6 +5,9 @@
       at the top of your <br />
       To Do List
     </h1>
+    <p>
+
+    </p>
     <!-- Background -->
     <div
       class="bg-dark bg-gradient text-center shadow-1-strong rounded text-white"
@@ -25,7 +28,7 @@
                 "
               >
                 <div class="card-body p-5 shadow-5 text-center">
-                  <h2 class="fw-bold mb-4">Sign up</h2>
+                  <h2 class="fw-bold mb-4">Log up</h2>
                   <p class="mb-5 fw-bold text-warning">"Good Tasks Only"</p>
 
                   <form @submit.prevent="LogInStore.handleLogin">
@@ -80,7 +83,7 @@
                       :value="loading ? 'Loading' : 'Send magic link'"
                       :disabled="loading"
                     >
-                      Sign up
+                      Log up
                     </button>
                   </form>
                 </div>
@@ -124,7 +127,7 @@
               <div class="p-2 bd-highlight text-center">
                 <h2>Create Account</h2>
 
-                <button>Signup</button>
+                <button>Logup</button>
               </div>
             </div>
             <div class="col-lg-6 mb-5 mb-lg-0">

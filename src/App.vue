@@ -1,18 +1,20 @@
 <template>
-
+  <SignInUP v-if="true"></SignInUP>
+<!--
 <NavBar />
 <router-view></router-view>
-<Auths2 v-if="store.store"></Auths2>
+<Profile2 v-if="store.user"></Profile2>
   <div class="container" style="padding: 50px 0 100px 0">
-    <!--<router-link to="/prueba">Prueba</router-link>
+    <router-link to="/prueba">Prueba</router-link>
   
     <Profile v-if="store.user" />
     <Auth v-else />
     <Prueba></Prueba>
-    <ToDoList></ToDoList>-->
+    <ToDoList></ToDoList>
+    
 
   </div>
-
+<Footer> </Footer>-->
 </template>
 
 <script>
@@ -30,6 +32,7 @@ import Auth2 from './components/Auths2.vue'
 import router from './router/index.js';
 import Auths2 from "./components/Auths2.vue";
 import Profile2 from "./components/Profile2.vue";
+import Footer from "./components/Footer.vue";
 
 
 export default {
@@ -43,7 +46,8 @@ export default {
     SignInUP,
     Notes,
     Auths2,
-    Profile2
+    Profile2,
+    Footer,
 },
 
 
