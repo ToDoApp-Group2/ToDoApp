@@ -81,14 +81,13 @@
                   alt="CheckMe logo"
                   class="w-25 h-25"
                 />
-                <h1 class="fw-bold bd-highlight text-black text-center">
+                <h1 class="fw-bold bd-highlight text-black text-center m-3">
                   Bringing a true feeling<br />
                   to your every day tasks.
                 </h1>
-                <p class="text-left fw-bold text-left">
+                <p class="text-left fw-bold text-left text-center m-5">
                   Check.Me organize your tasks <br />
-                  in one easy to use app.<br />
-                  Good tasks only.
+                  in one easy to use app.
                 </p>
               </div>
             </div>
