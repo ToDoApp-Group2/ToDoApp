@@ -1,18 +1,13 @@
 <template>
-  <!--<div class="container" style="padding: 0 0 100px 0">-->
+
   <NavBar />
   <router-view></router-view>
-  <Auths2 v-if="store.user"></Auths2>
+  <Auths2></Auths2>
   <Profile2></Profile2>
-    
-      <!--<router-link to="/prueba">Prueba</router-link>
-    
-      <Profile v-if="store.user" />
-      <Auth v-else />
-      <Prueba></Prueba>
-      <ToDoList></ToDoList>-->
-  
+  <Footer></Footer>
+
 </template>
+
 
 <script>
 import { store } from "./stores/store";
