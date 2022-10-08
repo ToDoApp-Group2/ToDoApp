@@ -2,7 +2,7 @@
         <div class="bg-dark bg-gradient text-center shadow-1-strong rounded text-white">
       <div class="d-flex col-md-6 mx-auto mt-5"></div>
             <!-- Section: Design Block 2 -->
-            <section class="text-center text-lg-start">
+            <section class="text-center text-lg-start p-5">
         <!-- Jumbotron -->
         <div class="container py-4">
           <div class="row g-0 align-items-center">
@@ -124,3 +124,32 @@
     }
   </script>
   
+  <style>
+body {
+  min-height: 0;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+template {
+  padding: 0;
+  margin: 0;
+}
+
+.cascading-right {
+  margin-right: -50px;
+}
+
+.cascading-left {
+  margin-left: -50px;
+}
+
+@media (max-width: 991.98px) {
+  .cascading-right {
+    margin-right: 0;
+  }
+}
+</style>

@@ -2,8 +2,8 @@
 
   <NavBar />
   <router-view></router-view>
-  <Auths2></Auths2>
-  <Profile2></Profile2>
+
+
   <Footer></Footer>
 
 </template>
@@ -25,6 +25,7 @@ import router from './router/index.js';
 import Auths2 from "./components/Auths2.vue";
 import Profile2 from "./components/Profile2.vue";
 import Footer from "./components/Footer.vue";
+import Auths3 from "./components/Auths3.vue";
 
 
 export default {
@@ -40,6 +41,7 @@ export default {
     Auths2,
     Profile2,
     Footer,
+    Auths3,
 },
 
 
