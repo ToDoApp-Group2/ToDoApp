@@ -18,7 +18,7 @@
                 "
               >
                 <div class="card-body p-5 shadow-5 text-center">
-                  <h2 class="fw-bold mb-4">Sign up</h2>
+                  <h2 class="fw-bold mb-4"> Profile </h2>
                   <p class="mb-5 fw-bold text-warning">"Good Tasks Only"</p>
 
                   <form class="form-widget" @submit.prevent="updateProfile">
@@ -67,7 +67,7 @@
                       :value="loading ? 'Loading' : 'Send magic link'"
                       :disabled="loading"
                     >
-                      Sign up
+                      Save
                     </button>
                   </form>
                 </div>
@@ -75,17 +75,39 @@
             </div>
 
             <div
-              class="bg-img bg-image w-50 rounded-4 shadow-4 col-lg-6 mb-5 mb-lg-0 d-flex align-items-center justify-content-center"
+              class="
+                bg-img bg-image
+                w-50
+                rounded-4
+                shadow-4
+                col-lg-6
+                mb-5 mb-lg-0
+                d-flex
+                align-items-center
+                justify-content-center
+              "
               style="
                 background-image: url('https://images.pexels.com/photos/7582013/pexels-photo-7582013.jpeg');
                 height: 100vh;
+                width: 100vh;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
               "
             >
-              <div class="p-2 bd-highlight text-center">
-                <h2>Welcome Back!</h2>
-                <button>Login</button>
+              <div class="bd-highlight">
+                <img
+                  src="/src/assets/logocheckme.png"
+                  alt="CheckMe logo"
+                  class="w-25 h-25"
+                />
+                <h1 class="fw-bold bd-highlight text-black text-center m-3">
+                  Bringing a true feeling<br />
+                  to your every day tasks.
+                </h1>
+                <p class="text-left fw-bold text-left text-center m-5">
+                  Check.Me organize your tasks <br />
+                  in one easy to use app.
+                </p>
               </div>
             </div>
           </div>
