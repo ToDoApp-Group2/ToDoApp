@@ -3,59 +3,105 @@
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     rel="stylesheet"
   />
-  <div class="container">
-    
-    <div class="d-flex">
-        <!--Colocar titulo de la tarea
+  <div class="vh-100" style="background-color: #212529">
+    <div
+      class="container py-5 h-100"
+      
+    >
+      <div class="card rounded-3 bg-image" style="
+        background-image: url('https://img.freepik.com/foto-gratis/textura-madera-pino_1194-5372.jpg?w=996&t=st=1665239508~exp=1665240108~hmac=01e3b3673af429c47ba8181ecf8a725fb7e18ce3d3f6d8a5c9a6006094760b05');
+        height: 100vh;
+        background-size: auto 100%;
+       
+      ">
+        <div class="card-body p-4">
+          <div class="text-center pt-4 pb-3 mr-10">
+            <img
+              src="/src/assets/logocheckme.png"
+              alt="Check"
+              width="110"
+            />
+            <h2 class="my-1 mb-5">Task List</h2>
+          </div>
+          <div class="d-flex">
+            <!--Colocar titulo de la tarea
         <input
         v-model="ListStore.task"
         type="text"
         placeholder="Ingrese tarea"
         class="form-control"
       />-->
-      <!--Colocar información de la tarea-->
-      <input
-        v-model="ListStore.task"
-        type="text"
-        placeholder="Ingrese tarea"
-        class="form-control"
-      />
-      <button @click="ListStore.submitTask" class="btn btn-primary rounded-0">
-        Aceptar
-      </button>
-    </div>
-<div class="row">
-    <div v-for="(task, index) in ListStore.tasksList" :key="index" class="col">
-      <ul class="notes row">
-        <li>
-          <div class="rotate-1 col-sm  mt-5 mb-0" :class="{
-              'bg-danger': task.is_complete === 'Pendiente',
-              'bg-warning': task.is_complete === 'En Progreso',
-              'bg-success': task.is_complete === 'Terminada',
-              
-            }">
-            <small>{{ task.inserted_at }}</small>
-
-            <h4 @click="ListStore.changeStatus(index)" class="pointer" :class="{
-                'text-light': task.is_complete === 'Pendiente',
-                'text-light': task.is_complete === 'En Progreso',
-                'text-light': task.is_complete === 'Terminada',
-                'finished' : task.is_complete === 'Terminada'
-              }">
-              {{ task.is_complete }}
-            </h4>
-    
-            <p>{{ task.title }}</p>
-
-            <a href="#" class="text-dark pull-left pull-button" @click="ListStore.editTask(index)">
-                <i class="fa fa-pen"></i></a>
-            <a href="#" class="text-dark pull-right" @click="ListStore.deleteTask(index)">
-                <i class="fa fa-trash"></i></a>
+            <!--Colocar información de la tarea-->
+            <input
+              v-model="ListStore.task"
+              type="text"
+              placeholder="Ingrese tarea"
+              class="form-control"
+            />
+            <button
+              @click="ListStore.submitTask"
+              class="btn btn-warning ms-2 text-white"
+            >
+              Aceptar
+            </button>
           </div>
-        </li>
-      </ul>
+
+          <div class="row mt-5">
+            <div
+              v-for="(task, index) in ListStore.tasksList"
+              :key="index"
+              class="col"
+            >
+              <ul class="notes row">
+                <li>
+                  <div
+                    class="rotate-1 col-sm mt-5 mb-0"
+                    :class="{
+                      'bg-danger bg-gradient': task.is_complete === 'Pendiente',
+                      'bg-warning bg-gradient':
+                        task.is_complete === 'En Progreso',
+                      'bg-success bg-gradient':
+                        task.is_complete === 'Terminada',
+                    }"
+                  >
+                    <h3>{{ task.title }}</h3>
+
+                    <h5
+                      @click="ListStore.changeStatus(index)"
+                      class="pointer"
+                      :class="{
+                        'text-light': task.is_complete === 'Pendiente',
+                        'text-light': task.is_complete === 'En Progreso',
+                        'text-light': task.is_complete === 'Terminada',
+                        finished: task.is_complete === 'Terminada',
+                      }"
+                    >
+                      {{ task.is_complete }}
+                    </h5>
+                    <hr class="hr hr-blurry" />
+
+                    <a
+                      href="#"
+                      class="text-dark pull-left pull-button"
+                      @click="ListStore.editTask(index)"
+                    >
+                      <i class="far fa-edit"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="text-dark pull-right"
+                      @click="ListStore.deleteTask(index)"
+                    >
+                      <i class="fa fa-trash-alt"></i
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
   </div>
 </template>
 
@@ -73,17 +119,16 @@ export default {
     ...mapStores(useListStore),
   },
 
-  mounted(){
-        this.ListStore.CallData()
-    }
+  mounted() {
+    this.ListStore.CallData();
+  },
 };
 </script>
 
 <style scoped>
-
-.finished{
-        text-decoration: line-through;
-    }
+.finished {
+  text-decoration: line-through;
+}
 
 body {
   margin-top: 20px;
@@ -94,7 +139,7 @@ ul.notes li {
   float: left;
 }
 
-ul.notes li{
+ul.notes li {
   list-style: none;
 }
 
