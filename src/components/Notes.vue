@@ -34,6 +34,7 @@
               type="text"
               placeholder="Ingrese tarea"
               class="form-control"
+              style="width: 35%"
             />
 
             <input
@@ -41,6 +42,7 @@
               type="text"
               placeholder="Ingrese descripción"
               class="form-control"
+              style="width: 65%"
             />
 
             <button
@@ -135,6 +137,10 @@ export default {
 </script>
 
 <style scoped>
+
+.pointer {
+  cursor: pointer;
+}
 
 i {
   margin: 2rem;
