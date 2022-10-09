@@ -77,7 +77,7 @@
             <div
               class="
                 bg-img bg-image
-                w-50
+                w-50 image
                 rounded-4
                 shadow-4
                 col-lg-6
@@ -209,3 +209,12 @@
       },
     }
   </script>
+
+  <style>
+/*@media (max-width: 1000px) {
+  .image {
+    display: none;
+    visibility: hidden;
+  }
+}*/
+</style>

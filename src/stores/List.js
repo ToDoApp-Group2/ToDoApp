@@ -29,7 +29,7 @@ export default defineStore("List", {
     async submitTask() {
       if (this.task.length < 4) return alert("Ingresa más de 3 caracteres en el titulo");
       if (this.task.length > 20) return alert("Ingrese menos de 20 caracteres en el titulo");
-      if (this.description.length > 60) return alert("Ingrese menos de 60 caracteres en la decripción");
+      if (this.description.length > 70) return alert("Ingrese menos de 60 caracteres en la decripción");
       //Acá se debe ingresar una alerta para tareas vacias.
       if (this.editedTask === null || this.editedDescription === null) {
         console.log(this.tasksList);
