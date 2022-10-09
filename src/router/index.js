@@ -1,9 +1,8 @@
 import App from "../App.vue"
 import { createRouter, createWebHistory } from 'vue-router';
-import Notes from '../components/Notes.vue';
-import Auths2 from '../components/Auths2.vue'
-import Auths3 from '../components/Auths3.vue'
-import Profile2 from '../components/Profile2.vue'
+import Notes from '../views/Notes.vue';
+import Auths3 from '../views/LogIn.vue'
+import Profile from '../views/Profile.vue'
  
 const routes = [
   {
@@ -19,7 +18,7 @@ const routes = [
   {
     path: '/profile',
     name: 'Profile',
-    component: Profile2,
+    component: Profile,
   }
 ];
  

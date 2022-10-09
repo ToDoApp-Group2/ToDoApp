@@ -1,14 +1,17 @@
 <template>
+    <Auths3></Auths3>
+  </template>
   
-</template>
-
-<script>
-import Auths3 from "./components/Auths3.vue";
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
+  <script>
+  import Auths3 from "../components/Auths3.vue";
+  export default {
+      components: {
+          Auths3,
+      }
+  
+  }
+  </script>
+  
+  <style>
+  
+  </style>

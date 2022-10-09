@@ -1,14 +1,17 @@
 <template>
+    <Notes></Notes>
+  </template>
   
-</template>
-
-<script>
-import Notes from "./components/Notes.vue"
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
+  <script>
+  import Notes from "../components/Notes.vue";
+  export default {
+      components: {
+          Notes,
+      }
+  
+  }
+  </script>
+  
+  <style>
+  
+  </style>
