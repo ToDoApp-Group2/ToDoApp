@@ -35,6 +35,14 @@
               placeholder="Ingrese tarea"
               class="form-control"
             />
+
+            <input
+              v-model="ListStore.description"
+              type="text"
+              placeholder="Ingrese descripción"
+              class="form-control"
+            />
+
             <button
               @click="ListStore.submitTask"
               class="btn btn-warning ms-2 text-white"
@@ -61,9 +69,24 @@
                         task.is_complete === 'Terminada',
                     }"
                   >
-                    <h3>{{ task.title }}</h3>
+                  <a
+                      href="#"
+                      class="text-dark pull-left pull-button"
+                      @click="ListStore.editTask(index)"
+                    >
+                      <i class="far fa-edit"></i
+                    ></a>
+                    
+                    <a
+                      href="#"
+                      class="text-dark pull-right"
+                      @click="ListStore.deleteTask(index)"
+                    >
+                      <i class="fa fa-trash-alt"></i
+                    ></a>
+                    <h5>{{ task.title }}</h5>
 
-                    <h5
+                    <h6
                       @click="ListStore.changeStatus(index)"
                       class="pointer"
                       :class="{
@@ -74,23 +97,12 @@
                       }"
                     >
                       {{ task.is_complete }}
-                    </h5>
+                    </h6>
                     <hr class="hr hr-blurry" />
 
-                    <a
-                      href="#"
-                      class="text-dark pull-left pull-button"
-                      @click="ListStore.editTask(index)"
-                    >
-                      <i class="far fa-edit"></i
-                    ></a>
-                    <a
-                      href="#"
-                      class="text-dark pull-right"
-                      @click="ListStore.deleteTask(index)"
-                    >
-                      <i class="fa fa-trash-alt"></i
-                    ></a>
+
+                    <p>{{task.description}}</p>
+
                   </div>
                 </li>
               </ul>
@@ -123,6 +135,10 @@ export default {
 </script>
 
 <style scoped>
+
+i {
+  margin: 2rem;
+}
 .principal{
   background-color: #212529;
 }

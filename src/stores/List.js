@@ -7,16 +7,18 @@ export default defineStore("List", {
         user : supabase.auth.user(),
             tasks: [],
             task : "",
+            description: "",
             statuses : ["Pendiente", "En Progreso", "Terminada"],
             tasksList : [],
             editedTask : null,
+            editedDescription : null,
     };
   },
   actions: {
     async CallData() {
       this.tasks = await supabase
         .from("tasks")
-        .select("title, is_complete, id, inserted_at")
+        .select("title, is_complete, id, inserted_at, description")
         .eq("user_id", this.user.id);
       this.tasksList = [];
       for (let i = 0; i < this.tasks.data.length; i++) {
@@ -25,14 +27,17 @@ export default defineStore("List", {
     },
 
     async submitTask() {
-      if (this.task.length < 4) return alert("Ingresa más de 3 letras");
+      if (this.task.length < 4) return alert("Ingresa más de 3 caracteres en el titulo");
+      if (this.task.length > 20) return alert("Ingrese menos de 20 caracteres en el titulo");
+      if (this.description.length > 60) return alert("Ingrese menos de 60 caracteres en la decripción");
       //Acá se debe ingresar una alerta para tareas vacias.
-      if (this.editedTask === null) {
-        console.log(1);
+      if (this.editedTask === null || this.editedDescription === null) {
+        console.log(this.tasksList);
         await supabase
           .from("tasks")
           .insert({
             title: this.task,
+            description: this.description,
             /*id: this.tasksList.length,*/ user_id: this.user.id,
           });
         this.CallData();
@@ -43,16 +48,21 @@ export default defineStore("List", {
       } else {
         this.tasksList[this.editedTask].title = this.task;
         this.editedTask = null;
+
+        this.tasksList[this.editedDescription].description = this.description;
+        this.editedDescription = null;
+
         for (let i = 0; i < this.tasksList.length; ++i) {
           console.log(this.tasksList[i].id);
           await supabase
             .from("tasks")
-            .update({ title: this.tasksList[i].title })
+            .update({ title: this.tasksList[i].title, description: this.tasksList[i].description})
             .eq("id", this.tasksList[i].id);
         }
       }
       // To delete after add a new task
       this.task = "";
+      this.description = "";
     },
 
     async deleteTask(index) {
@@ -63,7 +73,9 @@ export default defineStore("List", {
 
     editTask(index) {
       this.task = this.tasksList[index].title;
+      this.description = this.tasksList[index].description;
       this.editedTask = index;
+      this.editedDescription = index;
     },
 
     async changeStatus(index) {
@@ -78,3 +90,4 @@ export default defineStore("List", {
     },
   },
 });
+
