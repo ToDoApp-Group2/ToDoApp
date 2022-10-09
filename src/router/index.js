@@ -16,6 +16,11 @@ const routes = [
     name: 'Notes',
     component: Notes,
   },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile2,
+  }
 ];
  
 const router = createRouter({
