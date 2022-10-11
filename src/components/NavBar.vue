@@ -2,7 +2,7 @@
   <nav>
       <div class="test" >
           <img src="/src/assets/logocheckme.png">
-          <span>CheckMe</span> 
+          <span>Check.me</span> 
       </div>
       <div class="ul-c">
           <ul ref="nav">
