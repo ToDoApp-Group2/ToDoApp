@@ -1,5 +1,5 @@
 
-<img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") /> <br />
+<img align="center" src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") /> <br />
  <h1 align="center">  Check.me </h1>
 
 
