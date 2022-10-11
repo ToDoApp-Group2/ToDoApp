@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="d-flex text-align-center">
 <img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") />
  Check.me 
  <img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") />
