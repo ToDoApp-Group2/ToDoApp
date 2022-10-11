@@ -63,7 +63,6 @@
                 shadow-4
                 col-lg-6
                 mb-5 mb-lg-0
-                
                 image
                 align-items-center
                 justify-content-center
@@ -76,18 +75,20 @@
                 background-repeat: no-repeat;
               "
             >
-              <div class="bd-highlight">
+              <div class="bd-highlight d-flex flex-column">
+                <div class="d-flex justify-content-end mt-4">
                 <img
                   src="/src/assets/logocheckme.png"
                   alt="CheckMe logo"
-                  class="w-25 h-25"
+                  class="h-25 mb-4"
                 />
-                <h1 class="fw-bold bd-highlight text-black text-center m-3">
+                </div>
+                <h1 class="fw-bold bd-highlight text-black text-center m-4">
                   Bringing a true feeling<br />
                   to your every day tasks.
                 </h1>
                 <p class="text-left fw-bold text-left text-center m-5">
-                  Check.Me organize your tasks <br />
+                  Check.me organize your tasks <br />
                   in one easy to use app.
                 </p>
               </div>
