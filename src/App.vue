@@ -1,10 +1,11 @@
 <template>
 
-  <NavBar />
-  <router-view></router-view>
-
-
+  <NavBar :nav-links="navLinks" />
+ <router-view :key="$route.path"></router-view>
+  <Notes></Notes>
+  <Profile2></Profile2>
   <Footer></Footer>
+
 
 </template>
 
@@ -26,6 +27,8 @@ import Auths2 from "./components/Auths2.vue";
 import Profile2 from "./components/Profile2.vue";
 import Footer from "./components/Footer.vue";
 import Auths3 from "./components/Auths3.vue";
+import SignIn from "./components/SignIn.vue";
+import LogIn from "./components/LogIn.vue";
 
 
 export default {
@@ -42,7 +45,23 @@ export default {
     Profile2,
     Footer,
     Auths3,
+    SignIn,
+    LogIn,
 },
+
+data: () => ({
+  navLinks:[
+    {
+      text:'Login',
+      path:"/login",
+    },
+    {
+      text:'Signup',
+      path:'/signin',
+    },
+
+  ]
+}),
 
 
 

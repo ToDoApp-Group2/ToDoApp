@@ -16,3 +16,5 @@ import '@fortawesome/fontawesome-free/js/all.js'
 const pinia = createPinia()
 
 createApp(App).use(pinia).use(router).mount('#app')
+
+
