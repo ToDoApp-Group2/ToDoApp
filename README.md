@@ -1,5 +1,5 @@
 <h1 align="center">🌟 Check.me 🌟</h1>
-![Logo Image](/src/assets/logocheckme.png)
+![Logo Image](src\assets\logocheckme.png)
 
 Applicación To-Do List con el objetivo de tener el fin de poder tener todas tus tareas al día en un "board" de manera que
 su visualización sea lo más natural y parecida a una tabla de notas real. 
