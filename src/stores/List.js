@@ -32,7 +32,7 @@ export default defineStore("List", {
       if (this.description.length > 70) return alert("Ingrese menos de 60 caracteres en la decripción");
       //Acá se debe ingresar una alerta para tareas vacias.
       if (this.editedTask === null || this.editedDescription === null) {
-        console.log(this.tasksList);
+        
         await supabase
           .from("tasks")
           .insert({
@@ -53,7 +53,7 @@ export default defineStore("List", {
         this.editedDescription = null;
 
         for (let i = 0; i < this.tasksList.length; ++i) {
-          console.log(this.tasksList[i].id);
+          
           await supabase
             .from("tasks")
             .update({ title: this.tasksList[i].title, description: this.tasksList[i].description})
@@ -66,7 +66,7 @@ export default defineStore("List", {
     },
 
     async deleteTask(index) {
-      console.log(this.tasksList[index]);
+    
       await supabase.from("tasks").delete().eq("id", this.tasksList[index].id);
       this.tasksList.splice(index, 1);
     },

@@ -64,6 +64,7 @@
                 col-lg-6
                 mb-5 mb-lg-0
                 d-flex
+                image
                 align-items-center
                 justify-content-center
               "
@@ -147,6 +148,12 @@ template {
   padding: 0;
   margin: 0;
 }*/
+@media (max-width: 1010px) {
+  .image {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 .cascading-right {
   margin-right: -50px;
