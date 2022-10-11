@@ -63,7 +63,7 @@
                 shadow-4
                 col-lg-6
                 mb-5 mb-lg-0
-                d-flex
+                
                 image
                 align-items-center
                 justify-content-center
