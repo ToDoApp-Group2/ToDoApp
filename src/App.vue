@@ -1,9 +1,7 @@
 <template>
 
 <NavBar :nav-links="navLinks" />
- <router-view :key="$route.path"></router-view>
-
-  <router-view></router-view>
+<router-view :key="$route.path"></router-view>
 
   <Footer></Footer>
 
