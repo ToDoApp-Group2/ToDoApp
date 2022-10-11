@@ -48,7 +48,7 @@
                       :value="loading ? 'Loading' : 'Send magic link'"
                       :disabled="loading"
                     >
-                      Send magin link
+                      Send magic link
                     </button>
                   </form>
                 </div>
@@ -117,9 +117,9 @@ export default {
         loading.value = true;
         const { error } = await supabase.auth.signIn({ email: email.value });
         if (error) throw error;
-        alert("Check your email for the login link!");
+        swal("","Check your email for the login link!", "success");
       } catch (error) {
-        alert(error.error_description || error.message);
+        swal(error.error_description || error.message);
       } finally {
         loading.value = false;
       }

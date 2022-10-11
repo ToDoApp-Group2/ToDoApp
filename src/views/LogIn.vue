@@ -1,6 +1,6 @@
 <template>
-    <!--<Profile2 v-if="store.user"></Profile2>-->
-    <Auths3></Auths3>
+    <Profile2 v-if="store.user"></Profile2>
+    <Auths3 v-else></Auths3>
 </template>
   
 <script>

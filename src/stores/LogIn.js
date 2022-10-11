@@ -33,7 +33,7 @@ export default defineStore("LogIn", {
               this.avatar_url = data.avatar_url
             }
           } catch (error) {
-            alert(error.message)
+            swal(error.message)
           } finally {
             this.loading = false
           }
@@ -58,7 +58,7 @@ export default defineStore("LogIn", {
   
             if (error) throw error
           } catch (error) {
-            alert(error.message)
+            swal(error.message)
           } finally {
             this.loading = false
           }
@@ -70,7 +70,7 @@ export default defineStore("LogIn", {
             let { error } = await supabase.auth.signOut()
             if (error) throw error
           } catch (error) {
-            alert(error.message)
+            swal(error.message)
           } finally {
             this.loading = false
           }
