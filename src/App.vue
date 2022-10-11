@@ -2,8 +2,6 @@
 
   <NavBar :nav-links="navLinks" />
  <router-view :key="$route.path"></router-view>
-  <Notes></Notes>
-  <Profile2></Profile2>
   <Footer></Footer>
 
 
