@@ -26,6 +26,7 @@
 
 
 <script>
+import useLogInStore from '../stores/LogIn'
 export default {
   props: ['navLinks'],
   methods: {
@@ -33,6 +34,9 @@ export default {
           const nav=this.$refs.nav.classList;
           nav.contains('active') ? nav.remove('active') : nav.add('active');
       }
+  },
+  computed: {
+    ...mapStores(useLogInStore),
   },
 };
 </script>
