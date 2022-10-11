@@ -91,21 +91,23 @@
               background-repeat: no-repeat;
             "
           >
-            <div class="bd-highlight">
-              <img
-                src="/src/assets/logocheckme.png"
-                alt="CheckMe logo"
-                class="w-25 h-25"
-              />
-              <h1 class="fw-bold bd-highlight text-black text-center m-3">
-                Bringing a true feeling<br />
-                to your every day tasks.
-              </h1>
-              <p class="text-left fw-bold text-left text-center m-5">
-                Check.Me organize your tasks <br />
-                in one easy to use app.
-              </p>
-            </div>
+          <div class="bd-highlight d-flex flex-column">
+                <div class="d-flex justify-content-end mt-4">
+                <img
+                  src="/src/assets/logocheckme.png"
+                  alt="CheckMe logo"
+                  class="h-25 mb-4"
+                />
+                </div>
+                <h1 class="fw-bold bd-highlight text-black text-center m-4">
+                  Bringing a true feeling<br />
+                  to your every day tasks.
+                </h1>
+                <p class="text-left fw-bold text-left text-center m-5">
+                  Check.me organize your tasks <br />
+                  in one easy to use app.
+                </p>
+              </div>
           </div>
         </div>
       </div>
