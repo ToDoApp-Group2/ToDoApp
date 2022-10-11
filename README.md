@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") /> <br />
  <h1 align="center">  Check.me </h1>
-<div>
+</div>
 
 Applicación To-Do List con el objetivo de tener el fin de poder tener todas tus tareas al día en un "board" de manera que
 su visualización sea lo más natural y parecida a una tabla de notas real. 
@@ -16,7 +16,7 @@ El enlace a la plataforma: https://check-mi.netlify.app/
 ## 👷 Creado con 
 
 * [Vue]
-*[Bootstrap]
+* [Bootstrap]
 
 
 ## Cómo se usa
