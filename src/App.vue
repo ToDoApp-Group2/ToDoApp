@@ -37,10 +37,6 @@ data: () => ({
       path:"/",
     },
     {
-      text:'Profile',
-      path:'/profile',
-    },
-    {
       text:'Notes',
       path:'/notes',
     },

@@ -16,6 +16,7 @@
                   {{ link.text }}
               </router-link>
               </li>
+              <li><a @click="LogInStore.signOut()">Sign Out</a></li>
           </ul>
       </div>
       <div class="hamburguer" @click="toggleNav">
@@ -26,7 +27,9 @@
 
 
 <script>
-import useLogInStore from '../stores/LogIn'
+import { mapStores } from "pinia";
+import useLogInStore from '../stores/LogIn';
+
 export default {
   props: ['navLinks'],
   methods: {
@@ -113,7 +116,7 @@ nav {
     }
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1010px) {
   nav {
       nav, div {
           &.ul-c {
