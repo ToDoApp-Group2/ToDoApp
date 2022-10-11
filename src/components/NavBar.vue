@@ -1,6 +1,6 @@
 <template>
   <nav>
-      <div class="test" @click="toggleNav">
+      <div class="test" >
           <img src="/src/assets/logocheckme.png">
           <span>CheckMe</span> 
       </div>
@@ -17,6 +17,9 @@
               </router-link>
               </li>
           </ul>
+      </div>
+      <div class="hamburguer" @click="toggleNav">
+        <i class="fa fa-bars"></i>
       </div>
   </nav>    
 </template>
@@ -93,10 +96,17 @@ nav {
               
           }
           a:hover{
-              color: orangered;
+              color:#ffc107;
           }
       }
   }
+  }
+
+  nav, div {
+
+    &.hamburguer {
+        display: none;
+    }
   }
 }
 @media screen and (max-width: 750px) {
@@ -106,12 +116,12 @@ nav {
               ul {
                   display: flex;
                   position: absolute;
-                  width: 8rem;
+                  width: 50%;
                   height: 25%;
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  left: -240px;
+                  left: 4400px;
                   transition: .5s ease all;
                   top:5rem;
                   
@@ -119,10 +129,10 @@ nav {
                   &.active {
                       background-color: black;
                       top: 5rem;
-                      left: 0rem;
-                      right: 0rem;
+                      left: 25rem;
+                      right: 5rem;
                       margin-right: 0;
-                      z-index: 1;
+                      z-index: 99;
                       
                   }
                   &.img-log {
@@ -138,7 +148,7 @@ nav {
                       justify-content: center;
                   }
                   li:hover{
-                      background-color: orangered;
+                      background-color: #ffc107;
                       height: auto;
                   }
                   a {
@@ -153,6 +163,22 @@ nav {
               }
           }
       }
+
+    nav, div {
+
+    &.hamburguer {
+        display: block;
+        margin-right: 3rem;
+        font-size: 1.9rem;
+
+    }
+
+    &.hamburguer:hover {
+        color: #ffc107;
+
+    }
   }
+  }
+
 }
 </style>
