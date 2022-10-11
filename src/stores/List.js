@@ -27,9 +27,9 @@ export default defineStore("List", {
     },
 
     async submitTask() {
-      if (this.task.length < 4) return alert("Ingresa más de 3 caracteres en el titulo");
-      if (this.task.length > 20) return alert("Ingrese menos de 20 caracteres en el titulo");
-      if (this.description.length > 70) return alert("Ingrese menos de 60 caracteres en la decripción");
+      if (this.task.length < 4) return swal("", "Ingrese más de 3 caracteres en el título", "error");
+      if (this.task.length > 20) return swal("", "Ingrese menos de 20 caracteres en el título", "error");
+      if (this.description.length > 70) return swal("", "Ingrese menos de 60 caracteres en la descripción", "error");
       //Acá se debe ingresar una alerta para tareas vacias.
       if (this.editedTask === null || this.editedDescription === null) {
         
@@ -51,6 +51,7 @@ export default defineStore("List", {
 
         this.tasksList[this.editedDescription].description = this.description;
         this.editedDescription = null;
+        
 
         for (let i = 0; i < this.tasksList.length; ++i) {
           
@@ -58,11 +59,17 @@ export default defineStore("List", {
             .from("tasks")
             .update({ title: this.tasksList[i].title, description: this.tasksList[i].description})
             .eq("id", this.tasksList[i].id);
+       
+            
         }
+        
+        
       }
+      
       // To delete after add a new task
       this.task = "";
       this.description = "";
+     
     },
 
     async deleteTask(index) {

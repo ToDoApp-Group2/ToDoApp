@@ -18,6 +18,8 @@ import router from './router/index.js';
 import Profile2 from "./components/Profile2.vue";
 import Footer from "./components/Footer.vue";
 import Auths3 from "./components/Auths3.vue";
+import swal from 'sweetalert';
+
 
 
 export default {
