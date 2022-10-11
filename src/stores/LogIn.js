@@ -67,6 +67,7 @@ export default defineStore("LogIn", {
         async  signOut() {
           try {
             this.loading = true
+            console.log("Log Out")
             let { error } = await supabase.auth.signOut()
             if (error) throw error
           } catch (error) {

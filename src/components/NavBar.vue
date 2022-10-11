@@ -16,7 +16,7 @@
                   {{ link.text }}
               </router-link>
               </li>
-              <li><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
+              <li v-if="store.user"><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
           </ul>
       </div>
       <div class="hamburguer" @click="toggleNav">
@@ -27,11 +27,24 @@
 
 
 <script>
+import { supabase } from "../supabase/index";
 import { mapStores } from "pinia";
 import useLogInStore from '../stores/LogIn';
+import { store } from "../stores/store";
 
 export default {
+  data(){
+    store.user = supabase.auth.user();
+        supabase.auth.onAuthStateChange((_, session) => {
+            store.user = session.user;
+        });
+        return {
+            store,
+        };
+  },
+
   props: ['navLinks'],
+  
   methods: {
       toggleNav(){
           const nav=this.$refs.nav.classList;
