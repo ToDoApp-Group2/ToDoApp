@@ -16,7 +16,7 @@
                   {{ link.text }}
               </router-link>
               </li>
-              <li><a @click="LogInStore.signOut()">Sign Out</a></li>
+              <li><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
           </ul>
       </div>
       <div class="hamburguer" @click="toggleNav">
@@ -46,6 +46,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.pointer{
+  cursor:pointer;
+}
+
 nav {
   display: flex;
   background: whitesmoke;
