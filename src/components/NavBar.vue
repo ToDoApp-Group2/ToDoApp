@@ -32,7 +32,9 @@ export default {
       toggleNav(){
           const nav=this.$refs.nav.classList;
           nav.contains('active') ? nav.remove('active') : nav.add('active');
-      }
+      },
+
+
   },
 };
 </script>
