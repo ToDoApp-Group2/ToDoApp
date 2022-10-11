@@ -82,7 +82,6 @@
                 shadow-4
                 col-lg-6
                 mb-5 mb-lg-0
-                d-flex
                 align-items-center
                 justify-content-center
               "
@@ -211,10 +210,10 @@
   </script>
 
   <style>
-/*@media (max-width: 1000px) {
+@media (max-width: 1010px) {
   .image {
     display: none;
     visibility: hidden;
   }
-}*/
+}
 </style>
