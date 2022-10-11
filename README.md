@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# Checkme
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**Check.Me** es una applicación To-Do List con el fin de poder tener todas tus tareas ordenadas por estado (pendiente, en progreso, terminada) en un "board" de manera que
+su visualización sea lo más natural y parecida a una tabla de notas real. 
 
-## Recommended IDE Setup
+## Instalación
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Chec.Me puede ser instalado desde npm
+
+"$ npm install "
+
+## Cómo se usa
+
+## Cómo contribuir
+
+## Licencia
