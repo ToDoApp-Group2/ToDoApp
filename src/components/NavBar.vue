@@ -153,8 +153,8 @@ nav {
                   &.active {
                       background-color: black;
                       top: 5rem;
-                      left: 25rem;
-                      right: 5rem;
+                      left: auto;
+                      right: 0rem;
                       margin-right: 0;
                       z-index: 99;
                       
