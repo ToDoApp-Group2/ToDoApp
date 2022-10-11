@@ -1,8 +1,6 @@
-<h1 align="d-flex text-align-center">
-<img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") />
- Check.me 
- <img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") />
- </h1>
+
+<img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") /> <br />
+ <h1 align="center">  Check.me </h1>
 
 
 Applicación To-Do List con el objetivo de tener el fin de poder tener todas tus tareas al día en un "board" de manera que
