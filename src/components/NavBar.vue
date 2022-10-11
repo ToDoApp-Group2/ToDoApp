@@ -121,7 +121,7 @@ nav {
                   flex-direction: column;
                   align-items: center;
                   justify-content: center;
-                  left: 4400px;
+                  left: -440px;
                   transition: .5s ease all;
                   top:5rem;
                   
@@ -129,8 +129,8 @@ nav {
                   &.active {
                       background-color: black;
                       top: 5rem;
-                      left: 25rem;
-                      right: 5rem;
+                      left: auto;
+                      right: 0rem;
                       margin-right: 0;
                       z-index: 99;
                       
