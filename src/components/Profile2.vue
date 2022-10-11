@@ -71,8 +71,8 @@
                   <button
                     type="submit"
                     class="btn btn-warning btn-block mb-4"
-                    :value="loading ? 'Loading' : 'Send magic link'"
-                    :disabled="loading"
+                    :value="LogInStore.loading ? 'Loading' : 'Send magic link'"
+                    :disabled="LogInStore.loading"
                   >
                     Save
                   </button>

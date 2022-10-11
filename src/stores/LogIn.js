@@ -7,7 +7,7 @@ export default defineStore("LogIn", {
   state() {
     return {
         user : supabase.auth.user(),
-        loading : ref(true),
+        loading : ref(false),
         username : ref(''),
         website : ref(''),
         avatar_url : ref(''),
