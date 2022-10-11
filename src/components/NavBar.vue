@@ -1,89 +1,184 @@
 <template>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- Container wrapper -->
-  <div class="container">
-    <!-- Navbar brand -->
-    <a class="navbar-brand me-1" href="#">
-      <img
-        src="/src/assets/logocheckme.png"
-        height="40"
-        alt="CheckMe logo"
-        loading="lazy"
-        style="margin-top: -1px;"
-      />
-    </a>
-
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarButtonsExample"
-      aria-controls="navbarButtonsExample"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarButtonsExample">
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link bold-style1" href="#">CheckMe</a>
-        </li>
-      </ul>
-      <!-- Left links -->
-
-      <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-link px-3 me-2 logIn-style">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary me-3 signUp-style">
-          Sign up
-        </button>
-        
+  <nav>
+      <div class="test" >
+          <img src="/src/assets/logocheckme.png">
+          <span>CheckMe</span> 
       </div>
-    </div>
-    <!-- Collapsible wrapper -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
+      <div class="ul-c">
+          <ul ref="nav">
+              <li class="links"
+              v-for="(link, index) in navLinks"
+              :key="index"
+              >
+              <router-link
+              :to="link.path"
+              >
+                  {{ link.text }}
+              </router-link>
+              </li>
+          </ul>
+      </div>
+      <div class="hamburguer" @click="toggleNav">
+        <i class="fa fa-bars"></i>
+      </div>
+  </nav>    
 </template>
 
 
 <script>
-
-export default{
-}
+export default {
+  props: ['navLinks'],
+  methods: {
+      toggleNav(){
+          const nav=this.$refs.nav.classList;
+          nav.contains('active') ? nav.remove('active') : nav.add('active');
+      }
+  },
+};
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+nav {
+  display: flex;
+  background: whitesmoke;
+  height: 5rem;
+  box-shadow: 2px 2px 2px #CCC;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  nav, div {
+      &.test {
+              display: flex;
+              cursor: pointer;
+              justify-content: flex-start;
+              margin-left: 3rem;
+              align-content: center;
+      
+              img{
+                  height: 3.8rem;
+              }
+              span {
+                  display: flex;
+                  font-weight: 700;
+                  align-items: center;
+                  font-size: 1.5rem;
+              }
+          }
+  }
+  nav, div {
+  &.ul-c {
+      display: flex;
+      margin-right: 3rem;
+      justify-content: space-between;
+      ul{
+          display: flex;
+          height: 100%;
+          align-items: center;
+          margin: 0;
+          padding: 0;
+          gap: 1rem;
+          /*margin-right: 2rem;*/
+          flex-wrap: wrap;
+          justify-content: space-between;
+          
+          li{
+              display: flex;
+              list-style: none;
+              justify-content: space-between;
+          }
+          a{
+              text-decoration: none;
+              display: flex;
+              flex-direction: row-reverse;
+              color: black;
+              font-weight: 700;
+              
+          }
+          a:hover{
+              color:#ffc107;
+          }
+      }
+  }
+  }
 
-.bold-style1{
-    font-weight: bold;
-    font-size: 1.5rem;
-  
-}
-.logIn-style{
-    color: black;
-    font-weight: bold;
-    font-size: 1rem;
-    text-decoration: none;
-}
-.signUp-style{
-    background-color: black;
-    border-color:black ;
-    font-weight: bold;
-}
+  nav, div {
 
-button:hover{
-    background-color: black;
-    border-color:black ;
-    font-weight: bold;
+    &.hamburguer {
+        display: none;
+    }
+  }
+}
+@media screen and (max-width: 750px) {
+  nav {
+      nav, div {
+          &.ul-c {
+              ul {
+                  display: flex;
+                  position: absolute;
+                  width: 50%;
+                  height: 25%;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  left: 4400px;
+                  transition: .5s ease all;
+                  top:5rem;
+                  
+              
+                  &.active {
+                      background-color: black;
+                      top: 5rem;
+                      left: 25rem;
+                      right: 5rem;
+                      margin-right: 0;
+                      z-index: 99;
+                      
+                  }
+                  &.img-log {
+                      position: fixed;
+                      z-index: 99;
+                      top: 0px;
+                      left: 45px;
+                  }
+                  li {
+                      display: flex;
+                      width: 100%;
+                      flex: 0.5;
+                      justify-content: center;
+                  }
+                  li:hover{
+                      background-color: #ffc107;
+                      height: auto;
+                  }
+                  a {
+                      justify-content: center;                        
+                      color: white;
+                      align-items: center;
+                      
+                  }
+                  a:hover{
+                      color: black;
+                  }
+              }
+          }
+      }
+
+    nav, div {
+
+    &.hamburguer {
+        display: block;
+        margin-right: 3rem;
+        font-size: 1.9rem;
+
+    }
+
+    &.hamburguer:hover {
+        color: #ffc107;
+
+    }
+  }
+  }
+
 }
 </style>

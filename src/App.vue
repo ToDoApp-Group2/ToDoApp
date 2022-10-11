@@ -1,8 +1,7 @@
 <template>
 
-  <NavBar />
-
-  <router-view></router-view>
+<NavBar :nav-links="navLinks" />
+<router-view :key="$route.path"></router-view>
 
   <Footer></Footer>
 
@@ -31,6 +30,22 @@ export default {
     Auths3,
 },
 
+data: () => ({
+  navLinks:[
+    {
+      text:'Home',
+      path:"/",
+    },
+    {
+      text:'Profile',
+      path:'/profile',
+    },
+    {
+      text:'Notes',
+      path:'/notes',
+    },
+  ]
+}),
 
 
   setup() {
