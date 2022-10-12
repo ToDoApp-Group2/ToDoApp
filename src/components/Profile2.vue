@@ -103,10 +103,10 @@
                   Bringing a true feeling<br />
                   to your every day tasks.
                 </h1>
-                <p class="text-left fw-bold text-left text-center m-5">
+                <h4 class="text-left fw-bold text-left text-center m-5">
                   Check.me organize your tasks <br />
                   in one easy to use app.
-                </p>
+                </h4>
               </div>
           </div>
         </div>
