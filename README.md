@@ -1,11 +1,21 @@
+<br>
 <div align="center">
-<img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo") /> <br />
- <h1 align="center">  Check.me </h1>
+    <img src="https://github.com/ToDoApp-Group2/ToDoApp/blob/ValidReadme/src/assets/logocheckme.png" alt="check.me logo" /> <br />
+    <h3 align="center"> Check.me </h3>
+    <div align="center">
+        <a href="https://check-mi.netlify.app/"> View Check.me deployed in Netlify </a>
+    </div>
 </div>
 
-Applicación To-Do List con el objetivo de tener el fin de poder tener todas tus tareas al día en un "board" de manera que
-su visualización sea lo más natural y parecida a una tabla de notas real. 
+<br>
 
+# Ironhack Final Project
+
+Ironhack Frontend final project. The objective was to build a To-Do List using technologies such as: Vue, Supabase and Pinia. 
+
+<br>
+
+![homeviewCheck.me](./src/assets/notesviewCheckme.png)
 
 ## 🛠️ Instalación
 
