@@ -73,13 +73,13 @@ Technical Stack:
 <br>
 
 ### 🌐 Built with
-- Vue ![vue-logo](./src/assets/checkme_home_view.jpg)
-- JavaScript ![javascript-logo](./src/assets/checkme_home_view.jpg)
-- Bootstrap ![bootstrap-logo](./src/assets/bootstrap.svg)
-- CSS3 ![CSS3-logo](./src/assets/checkme_home_view.jpg)
-- Pinia ![pinia-logo](./src/assets/checkme_home_view.jpg)
-- Netlify ![netlify-logo](./src/assets/checkme_home_view.jpg)
-- Visual Studio Code ![VSC-logo](./src/assets/checkme_home_view.jpg)
+- Vue 
+- JavaScript 
+- <img src="./src/assets/bootstrap.svg" width="60" height="60" style="border-radius: 50%" alt="alberto avatar"> Bootstrap 
+- <img src="./src/assets/bootstrap.svg" width="60" height="60" style="border-radius: 50%" alt="alberto avatar"> Bootstrap 
+- Pinia 
+- Netlify 
+- Visual Studio Code 
 
 
 
