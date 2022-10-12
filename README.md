@@ -38,12 +38,12 @@ You can organize your task just checking its colour state: pending-red, in progr
 
 
 
-### Goals
+### 🦋 Goals
 
 - Use Vue.js to create an app
 - Connect a Vue.js app to Supabase (Database as a Service)
 
-### Deliverables
+### ❗ Deliverables
 
 The functionality should include:
 
@@ -55,7 +55,7 @@ The functionality should include:
 - An ability to delete existing tasks
 - A store and a database that your app can call data from
 
-### Technical specifications
+### 🛠️ Technical specifications
 
 Technical Stack
 - Client: Vue.js, Vite (dev server)
@@ -63,7 +63,7 @@ Technical Stack
 - Store: Pinia and Pinia Persist for persistent login
 - Database as a service: Supabase
 
-### Built with
+### 📂 Built with
 
 - ![VUE](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2FhxhRxxJ_vue-js-logo-png-transparent-png%2F&psig=AOvVaw0Z87BUUhXf4ggzXM5ZR6Ky&ust=1665698081890000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDrvIXX2_oCFQAAAAAdAAAAABAJ)
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
