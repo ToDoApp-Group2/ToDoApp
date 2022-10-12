@@ -72,7 +72,7 @@ export default defineStore("LogIn", {
             if (error) throw error
             swal("", "Haz cerrado sesión correctamente", "error")
           } catch (error) {
-            console.log("Log Out 2")
+            console.log("Log Out 4")
             error.message
           } finally {
             console.log("Log Out 3")
