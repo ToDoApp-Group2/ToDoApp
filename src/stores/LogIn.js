@@ -70,9 +70,10 @@ export default defineStore("LogIn", {
             console.log("Log Out 1")
             let { error } = await supabase.auth.signOut()
             if (error) throw error
+            swal("", "Haz cerrado sesión correctamente", "error")
           } catch (error) {
             console.log("Log Out 2")
-            swal(error.message, "Haz cerrado sesión correctamente", "error")
+            error.message
           } finally {
             console.log("Log Out 3")
             this.loading = false
