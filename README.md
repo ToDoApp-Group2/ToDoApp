@@ -73,14 +73,14 @@ Technical Stack:
 <br>
 
 ### 🌐 Built with
-- Vue <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2FhxhRxxJ_vue-js-logo-png-transparent-png%2F&psig=AOvVaw0Z87BUUhXf4ggzXM5ZR6Ky&ust=1665698081890000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDrvIXX2_oCFQAAAAAdAAAAABAJ" alt="vue-logo" />
+- Vue ![vue-logo](./src/assets/checkme_home_view.jpg)
+- JavaScript ![javascript-logo](./src/assets/checkme_home_view.jpg)
+- Bootstrap ![bootstrap-logo](./src/assets/bootstrap.svg)
+- CSS3 ![CSS3-logo](./src/assets/checkme_home_view.jpg)
+- Pinia ![pinia-logo](./src/assets/checkme_home_view.jpg)
+- Netlify ![netlify-logo](./src/assets/checkme_home_view.jpg)
+- Visual Studio Code ![VSC-logo](./src/assets/checkme_home_view.jpg)
 
-- ![VUE]("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2FhxhRxxJ_vue-js-logo-png-transparent-png%2F&psig=AOvVaw0Z87BUUhXf4ggzXM5ZR6Ky&ust=1665698081890000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDrvIXX2_oCFQAAAAAdAAAAABAJ")
-- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-- ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
-- ![Bootstrap]()
-- ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 
 
