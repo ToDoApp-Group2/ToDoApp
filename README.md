@@ -15,7 +15,8 @@ Ironhack Frontend final project. The objective was to build a To-Do List using t
 
 <br>
 
-![homeviewCheck.me](./src/assets/notesviewCheckme.png)
+![homeviewCheck.me](./src/assets/checkme_home_view.jpg)
+![homeviewCheck.me](./src/assets/checkme_notes_view.jpg)
 
 ## 🛠️ Instalación
 
