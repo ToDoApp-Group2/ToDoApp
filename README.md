@@ -75,8 +75,7 @@ Technical Stack:
 ### 🌐 Built with
 - Vue 
 - JavaScript 
-- <img src="./src/assets/bootstrap.svg" width="60" height="60" style="border-radius: 50%" alt="alberto avatar"> Bootstrap 
-- <img src="./src/assets/bootstrap.svg" width="60" height="60" style="border-radius: 50%" alt="alberto avatar"> Bootstrap 
+- Bootstrap 
 - Pinia 
 - Netlify 
 - Visual Studio Code 
