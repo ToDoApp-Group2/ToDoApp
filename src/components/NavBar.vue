@@ -8,7 +8,7 @@
                 <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
                     <router-link :to='link.path'>{{link.text}}</router-link>
                 </li>
-                <li v-if="store.user"><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
+                <li class="nav-item" v-if="store.user"><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
             </ul>
 
             <div class="hamburguer" :class="{active: showMenu}" @click="showMenu = !showMenu">
