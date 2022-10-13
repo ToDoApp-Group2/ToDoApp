@@ -4,7 +4,7 @@
     <div
       class="bg-dark bg-gradient text-center shadow-1-strong rounded text-white"
     >
-      <div class="d-flex col-md-6 mx-auto"></div>
+      <div class="col-md-6 mx-auto"></div>
 
       <!-- Section: Design Block 1 -->
       <section class="text-center text-lg-start p-3">
