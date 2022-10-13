@@ -8,7 +8,7 @@
                 <li class="nav-item" v-for="(link, index) in navLinks" :key="index">
                     <router-link :to='link.path'>{{link.text}}</router-link>
                 </li>
-                <li class="nav-item" v-if="store.user"><a class="pointer" @click="LogInStore.signOut()">Sign Out</a></li>
+                <li class="nav-item pointer" v-if="store.user"><a @click="LogInStore.signOut()">Sign Out</a></li>
             </ul>
 
             <div class="hamburguer" :class="{active: showMenu}" @click="showMenu = !showMenu">
@@ -72,6 +72,10 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.pointer{
+    cursor: pointer;
 }
 
 header {
